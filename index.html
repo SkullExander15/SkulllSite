@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skulll's Channels</title>
+  <style>
+    body {
+      background: #121212;
+      color: #eee;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      margin: 40px 0 20px;
+      text-align: center;
+    }
+
+    header div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #fb0100aa;
+      object-fit: cover;
+      border: 2px solid #fb0100;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #fb0100;
+      text-shadow: 0 0 10px #fb0100aa;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin: 30px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #eee;
+      background: #1e1e1e;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: all 0.25s ease;
+    }
+
+    nav a:hover {
+      background: #fb0100;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 0 10px #fb0100aa;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      color: #fb0100;
+      margin: 40px 0 5px;
+      text-align: center;
+      text-shadow: 0 0 5px #fb010055;
+    }
+
+    .subtext {
+      font-size: 0.9rem;
+      color: #bbb;
+      text-align: center;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 900px;
+      height: 500px;
+      border: none;
+      background: black;
+      display: block;
+      margin-bottom: 40px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
+      border-radius: 12px;
+    }
+
+    .shorts-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 50px;
+      width: 100%;
+      max-width: 960px;
+    }
+
+    .shorts-container iframe {
+      width: 300px;
+      height: 533px;
+      border-radius: 10px;
+      border: none;
+      display: block;
+    }
+
+    .panel {
+      background: #1e1e1e;
+      border-radius: 12px;
+      padding: 25px;
+      max-width: 900px;
+      width: 90%;
+      margin: 20px auto 60px;
+      box-shadow: 0 0 15px #00000055;
+    }
+
+    .panel h2 {
+      color: #fb0100;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 5px;
+    }
+
+    .panel p {
+      line-height: 1.6;
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+
+    .panel hr {
+      border: none;
+      border-top: 1px solid #333;
+      margin: 20px 0;
+    }
+
+    footer {
+      margin: 40px 0 20px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      .shorts-container iframe {
+        width: 90%;
+        height: auto;
+        aspect-ratio: 9/16;
+      }
+      .panel {
+        width: 95%;
+      }
+      iframe {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header with profile pic -->
+  <header>
+    <div>
+      <img src="SkulllCon_512.png" alt="Skulll Profile" />
+      <h1>Skulll's Channels</h1>
+    </div>
+    <p>Follow and watch my live stream</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="https://www.instagram.com/skulllexander/" target="_blank">📸 Instagram</a>
+    <a href="https://www.tiktok.com/@skulllexander" target="_blank">🎵 TikTok</a>
+    <a href="https://www.youtube.com/@SkulllExander" target="_blank">🔴 YouTube</a>
+    <a href="https://www.threads.com/@skulllexander" target="_blank">#️⃣ Threads</a>
+  </nav>
+
+  <!-- YouTube Live Stream -->
+  <h2 class="section-title">🔴 Live Here – Join Up 🎮</h2>
+  <p class="subtext">PS: When im live it shows up!</p>
+  <iframe
+    src="https://www.youtube.com/embed/live_stream?channel=UCqDHMpIpxVUOTuTbQtWzpFQ"
+    title="YouTube Live Stream"
+    allowfullscreen
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  ></iframe>
+
+  <!-- Recent YouTube Shorts -->
+  <h2 class="section-title">🎬 Recent YouTube Shorts</h2>
+  <section class="shorts-container" id="shorts"></section>
+
+  <!-- Subscribe Panel -->
+  <section class="panel" style="text-align: center;">
+    <h2>🔔 Subscribe Now</h2>
+    <p>If you're enjoying the content, hit the button below to subscribe and never miss a stream or short!</p>
+
+    <a href="https://www.youtube.com/channel/UCqDHMpIpxVUOTuTbQtWzpFQ?sub_confirmation=1" target="_blank" style="text-decoration: none;">
+      <div style="
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #ff0000;
+        color: white;
+        padding: 12px 28px;
+        border-radius: 999px;
+        font-weight: bold;
+        font-size: 1.2rem;
+        box-shadow: 0 0 15px #ff000080;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      " onmouseover="this.style.transform='scale(1.08)'; this.style.boxShadow='0 0 20px #ff0000bb'" 
+         onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px #ff000080'">
+        ▶️ Click to Subscribe
+      </div>
+    </a>
+
+    <p style="margin-top: 15px;">Or <a href="https://www.youtube.com/@SkulllExander" target="_blank" style="color: #fb0100; font-weight: bold;">visit my YouTube channel</a>.</p>
+  </section>
+
+  <!-- TikTok Section -->
+  <section class="panel" style="text-align: center;">
+    <h2>🎵 Latest TikTok Videos</h2>
+    <p>Follow me on TikTok for more fun clips!</p>
+
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@skulllexander/video/7516765288776338694" data-video-id="7516765288776338694" style="width: 300px; height: 533px;">
+        <section></section>
+      </blockquote>
+
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@skulllexander/video/7516384536113007878" data-video-id="7516384536113007878" style="width: 300px; height: 533px;">
+        <section></section>
+      </blockquote>
+    </div>
+
+    <a href="https://www.tiktok.com/@skulllexander" target="_blank" style="display: inline-block; margin-top: 15px; color: #fb0100; font-weight: bold; text-decoration: none;">
+      ➔ Follow me on TikTok
+    </a>
+  </section>
+
+  <!-- About & Rules Panel -->
+  <section class="panel">
+    <h2>📢 About & Rules</h2>
+    <p><strong>WHAT UP GAMERS!</strong></p>
+
+    <hr />
+
+    <p><strong>Want to add me?</strong><br>
+    Add me — my user is <strong>SkulllExander</strong>. But if you request to join me 3 times while I’m streaming or already playing with someone else, <strong>you will be unadded</strong>.</p>
+
+    <hr />
+
+    <p><strong>Respect Comes First</strong><br>
+    Harassment, racism, or any form of discrimination will not be tolerated here. Be polite and respectful. We also respect privacy — please don’t ask personal questions.</p>
+
+    <hr />
+
+    <p><strong>Goals</strong><br>
+    We aim to have a healthy and respectful community. To prevent confusion or stress, <strong>please do not spam</strong> in chat or text channels. That means constant messaging in a short amount of time.</p>
+
+    <p>🎯 <em>Thanks for reading – now go have fun!</em></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Skulll. All rights reserved.
+  </footer>
+
+  <!-- YouTube Shorts Fetch Script -->
+  <script>
+    const apiKey = "YOUR_API_KEY_HERE"; // Replace with your YouTube API key
+    const channelId = "UCqDHMpIpxVUOTuTbQtWzpFQ";
+
+    async function fetchShorts() {
+      try {
+        // Search for recent videos
+        const searchResponse = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=10&type=video`);
+        const searchData = await searchResponse.json();
+
+        // Extract video IDs
+        const videoIds = searchData.items.map(item => item.id.videoId).join(",");
+
+        // Get video details including duration
+        const videosResponse = await fetch(`https://www.googleapis.com/youtube/v3/videos?key=${apiKey}&id=${videoIds}&part=contentDetails,snippet`);
+        const videosData = await videosResponse.json();
+
+        // Parse ISO 8601 duration format to seconds
+        function parseDuration(isoDuration) {
+          const match = isoDuration.match(/PT(\d+M)?(\d+S)?/);
+          const minutes = match[1] ? parseInt(match[1].replace("M", "")) : 0;
+          const seconds = match[2] ? parseInt(match[2].replace("S", "")) : 0;
+          return minutes * 60 + seconds;
+        }
+
+        // Filter for shorts (<= 60 seconds)
+        const shorts = videosData.items.filter(video => parseDuration(video.contentDetails.duration) <= 60).slice(0, 3);
+
+        const shortsContainer = document.getElementById("shorts");
+        shortsContainer.innerHTML = "";
+
+        // Create iframe for each short
+        shorts.forEach(video => {
+          const iframe = document.createElement("iframe");
+          iframe.src = `https://www.youtube.com/embed/${video.id}`;
+          iframe.title = video.snippet.title;
+          iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+          iframe.allowFullscreen = true;
+          shortsContainer.appendChild(iframe);
+        });
+
+      } catch (error) {
+        console.error("Failed to fetch shorts:", error);
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", fetchShorts);
+  </script>
+
+  <!-- TikTok embed script -->
+  <script async src="https://www.tiktok.com/embed.js"></script>
+</body>
+</html>
+
